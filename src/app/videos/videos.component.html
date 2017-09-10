@@ -1,0 +1,41 @@
+<p>
+	videos works!
+</p>
+
+<p-dataGrid [value]="videos">
+	<ng-template let-video pTemplate="item">
+		<div class="ui-g-12 ui-md-3">
+			<div style="padding:3px" class="ui-g-12 ui-md-3">
+					<video width="280" height="220" controls>
+							<source src={{video.Src}} type="video/mp4">
+						</video>
+				<div><p style="text-align:center">{{video.Name}}</p></div>
+			</div>
+		</div>
+	</ng-template>
+</p-dataGrid>
+
+
+<!--<table class='table' *ngIf='videos && videos.length'>
+	<thead>
+		<tr>
+		    <th>Video</th>
+			<th>Name</th>
+			<th>Extension</th>
+			<th>Duration</th>
+         
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor='let video of videos'>
+			<td>
+				<video width="280" height="220" controls>
+					<source src={{video.Src}} type="video/mp4">
+				</video>
+			</td>
+			<td>{{ video.Name }}</td>
+			<td>{{ video.Extension }}</td>
+			<td>{{ video.Duration}}</td>   
+		</tr>
+	</tbody>
+</table>-->
